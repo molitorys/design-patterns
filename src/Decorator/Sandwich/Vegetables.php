@@ -1,8 +1,8 @@
 <?php
-namespace DesignPatterns\Decorator;
+namespace DesignPatterns\Decorator\Sandwich;
 
-use DesignPatterns\Decorator\SandwichInterface;
-use DesignPatterns\Decorator\SandwichAddition;
+use DesignPatterns\Decorator\Sandwich\SandwichInterface;
+use DesignPatterns\Decorator\Sandwich\SandwichAddition;
 
 class Vegetables extends SandwichAddition
 {    

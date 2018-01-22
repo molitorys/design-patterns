@@ -1,7 +1,7 @@
 <?php
-namespace DesignPatterns\Decorator;
+namespace DesignPatterns\Decorator\Sandwich;
 
-use DesignPatterns\Decorator\SandwichInterface;
+use DesignPatterns\Decorator\Sandwich\SandwichInterface;
 
 abstract class SandwichAddition implements SandwichInterface
 {
