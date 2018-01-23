@@ -3,6 +3,9 @@ namespace DesignPatterns\Decorator\Sandwich;
 
 use DesignPatterns\Decorator\Sandwich\SandwichInterface;
 
+/**
+ * Ingredients abstrack class
+ */
 abstract class SandwichAddition implements SandwichInterface
 {
     protected $ingredients = [];

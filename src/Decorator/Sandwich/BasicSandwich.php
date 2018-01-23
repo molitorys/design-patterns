@@ -3,6 +3,9 @@ namespace DesignPatterns\Decorator\Sandwich;
 
 use DesignPatterns\Decorator\Sandwich\SandwichInterface;
 
+/**
+ * Decorator base class
+ */
 class BasicSandwich implements SandwichInterface
 {
     private $ingredients = ['bułka', 'masło', 'majonez'];
