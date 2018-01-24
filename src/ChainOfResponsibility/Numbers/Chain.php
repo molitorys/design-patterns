@@ -1,5 +1,5 @@
 <?php
-namespace DesignPatterns\Adapter\ChainOfResponsibility;
+namespace DesignPatterns\ChainOfResponsibility\Numbers;
 
 /**
  * Abstract chain class, extended by chain link

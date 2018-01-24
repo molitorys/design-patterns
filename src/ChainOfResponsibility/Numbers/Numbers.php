@@ -1,5 +1,5 @@
 <?php
-namespace DesignPatterns\Adapter\ChainOfResponsibility;
+namespace DesignPatterns\ChainOfResponsibility\Numbers;
 
 /**
  * Simple example class which is a request to process for chian of responsibility 

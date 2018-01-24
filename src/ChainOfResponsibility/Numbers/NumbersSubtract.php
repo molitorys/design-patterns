@@ -1,7 +1,7 @@
 <?php
-namespace DesignPatterns\Adapter\ChainOfResponsibility;
+namespace DesignPatterns\ChainOfResponsibility\Numbers;
 
-use DesignPatterns\Adapter\ChainOfResponsibility\Chain;
+use DesignPatterns\ChainOfResponsibility\Numbers\Chain;
 
 /**
  * Subtract numbers chain link class
