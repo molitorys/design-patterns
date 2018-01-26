@@ -1,8 +1,8 @@
 <?php
 namespace DesignPatterns\Builder\Robot;
 
-use DesignPatterns\Adapter\Robot\RobotBuilder;
-use DesignPatterns\Adapter\Robot\Robot;
+use DesignPatterns\Builder\Robot\RobotBuilder;
+use DesignPatterns\Builder\Robot\Robot;
 
 /**
  * Robot Builder whi builds robot made of tin

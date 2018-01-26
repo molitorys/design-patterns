@@ -1,7 +1,7 @@
 <?php
 namespace DesignPatterns\Builder\Robot;
 
-use DesignPatterns\Adapter\Robot\RobotPlan;
+use DesignPatterns\Builder\Robot\RobotPlan;
 
 /**
  * Robot which i built according to plan
