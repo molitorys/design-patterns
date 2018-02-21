@@ -9,7 +9,7 @@ use DesignPatterns\Strategy\Compression\Compression;
 class RarCompression implements Compression
 {
     public function compressFile($filePath) {
-        echo 'Kompresuje plik '.$filePath.' do formatu RAR';
+        return 'Kompresuje plik '.$filePath.' do formatu RAR';
     }
 }
 

@@ -8,10 +8,10 @@ use DesignPatterns\Strategy\Compression\RarCompression;
 $compressionSystem = new CompressionSystem();
 
 $compressionSystem->setCompressionEngine(new ZipCompression());
-$compressionSystem->compress('plik-archiwalny-1.ods');
+echo $compressionSystem->compress('plik-archiwalny-1.ods');
 
 echo '<br />';
 
 $compressionSystem->setCompressionEngine(new RarCompression());
-$compressionSystem->compress('plik-archiwalny-2.ods');
+echo $compressionSystem->compress('plik-archiwalny-2.ods');
 

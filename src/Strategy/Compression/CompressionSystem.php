@@ -14,7 +14,7 @@ class CompressionSystem
     }
     
     public function compress($filePath) {
-        $this->compressionStrategy->compressFile($filePath);
+        return $this->compressionStrategy->compressFile($filePath);
     }   
 }
 

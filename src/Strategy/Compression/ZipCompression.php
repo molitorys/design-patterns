@@ -9,7 +9,7 @@ use DesignPatterns\Strategy\Compression\Compression;
 class ZipCompression implements Compression
 {
     public function compressFile($filePath) {
-        echo 'Kompresuje plik '.$filePath.' do formatu ZIP';
+        return 'Kompresuje plik '.$filePath.' do formatu ZIP';
     }
 }
 
