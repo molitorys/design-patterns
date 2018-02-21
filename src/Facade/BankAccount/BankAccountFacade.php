@@ -26,6 +26,8 @@ class BankAccountFacade
     $this->securityCode = $securityCode;
 
     $this->bankWelcome = new WelcomeToBank();
+    $this->bankWelcome->welcome();
+
     $this->accountChecker = new AccountNumberCheck();
     $this->codeChecker = new SecurityCodeCheck();
     $this->fundChecker = new FundsCheck();

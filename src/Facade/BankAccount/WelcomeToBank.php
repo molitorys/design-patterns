@@ -6,9 +6,15 @@ namespace DesignPatterns\Facade\BankAccount;
  */
 class WelcomeToBank
 {
-  public function __construct()
-  {
-    echo 'Witamy w banku ABC S.A.';
-    echo PHP_EOL;
-  }
+    private $welcome;
+
+    public function __construct()
+    {
+        $this->welcome = 'Witamy w banku ABC S.A.';
+    }
+
+    public function welcomeClients()
+    {
+        return $this->welcome;
+    }
 }
