@@ -26,12 +26,11 @@ class BankAccountFacade
     $this->securityCode = $securityCode;
 
     $this->bankWelcome = new WelcomeToBank();
-    $this->bankWelcome->welcome();
+    $this->bankWelcome->welcomeClients();
 
     $this->accountChecker = new AccountNumberCheck();
     $this->codeChecker = new SecurityCodeCheck();
     $this->fundChecker = new FundsCheck();
-    $this->fundChecker->addCashInAccount(1000.00);
   }
 
   public function getAccountNumber()
