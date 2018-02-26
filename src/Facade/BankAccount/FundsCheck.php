@@ -6,7 +6,12 @@ namespace DesignPatterns\Facade\BankAccount;
  */
 class FundsCheck
 {
-  private $cashInAccount = 1000.00;
+  private $cashInAccount = 0.00;
+
+  public function addCashInAccount($cash)
+  {
+    $this->cashInAccount = $cash;
+  }
 
   public function getCashInAccount()
   {
@@ -26,7 +31,7 @@ class FundsCheck
   public function haveEnoughMoney($cashToWithdrawal)
   {
     if($cashToWithdrawal > $this->getCashInAccount()) {
-      echo 'Błądd. Brak wystarczającej ilości środków na koncie'.PHP_EOL;
+      echo 'Błąd. Brak wystarczającej ilości środków na koncie'.PHP_EOL;
       echo 'Aktualny stan konta: '.$this->getCashInAccount().PHP_EOL;
       return false;
     }

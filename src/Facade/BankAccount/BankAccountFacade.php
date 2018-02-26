@@ -29,6 +29,7 @@ class BankAccountFacade
     $this->accountChecker = new AccountNumberCheck();
     $this->codeChecker = new SecurityCodeCheck();
     $this->fundChecker = new FundsCheck();
+    $this->fundChecker->addCashInAccount(1000.00);
   }
 
   public function getAccountNumber()
