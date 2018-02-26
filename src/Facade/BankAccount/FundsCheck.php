@@ -8,11 +8,6 @@ class FundsCheck
 {
   private $cashInAccount = 0.00;
 
-  public function addCashInAccount($cash)
-  {
-    $this->cashInAccount = $cash;
-  }
-
   public function getCashInAccount()
   {
     return $this->cashInAccount;
@@ -21,6 +16,10 @@ class FundsCheck
   public function decreaseCashInAccount($cashWithdrawn)
   {
     $this->cashInAccount -= $cashWithdrawn;
+
+    if($this->cashInAccount < 0.00) {
+      $this->cashInAccount = 0.00;      
+    }
   }
 
   public function increaseCashInAccount($cashDeposit)
