@@ -1,4 +1,5 @@
 <?php
+
 namespace DesignPatterns\Builder\Robot;
 
 /**
@@ -13,12 +14,12 @@ class RobotEngineer
     $this->robotBuilder = $robotBuilder;
   }
 
-  public function getRobot()
+  public function getRobot(): Robot
   {
     return $this->robotBuilder->getRobot();
   }
 
-  public function constructRobot()
+  public function constructRobot(): void
   {
     $this->robotBuilder->buildHead();
     $this->robotBuilder->buildTorso();

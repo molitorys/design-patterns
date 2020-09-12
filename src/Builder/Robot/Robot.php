@@ -1,7 +1,6 @@
 <?php
-namespace DesignPatterns\Builder\Robot;
 
-use DesignPatterns\Builder\Robot\RobotPlan;
+namespace DesignPatterns\Builder\Robot;
 
 /**
  * Robot which i built according to plan
@@ -13,42 +12,42 @@ class Robot implements RobotPlan
     private $arms;
     private $legs;
     
-    public function setHead($head)
+    public function setHead(string $head): void
     {
         $this->head = $head;
     }
     
-    public function getHead()
+    public function getHead(): ?string
     {
         return $this->head;
     }
     
-    public function setTorso($torso)
+    public function setTorso(string $torso): void
     {
         $this->torso = $torso;
     }
     
-    public function getTorso()
+    public function getTorso(): ?string
     {
         return $this->torso;
     }
     
-    public function setArms($arms)
+    public function setArms(string $arms): void
     {
         $this->arms = $arms;
     }
     
-    public function getArms()
+    public function getArms(): ?string
     {
         return $this->arms;
     }
     
-    public function setLegs($legs)
+    public function setLegs(string $legs): void
     {
         $this->legs = $legs;
     }
     
-    public function getLegs()
+    public function getLegs(): ?string
     {
         return $this->legs;
     }

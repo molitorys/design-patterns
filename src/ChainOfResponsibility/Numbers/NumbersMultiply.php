@@ -1,7 +1,6 @@
 <?php
-namespace DesignPatterns\ChainOfResponsibility\Numbers;
 
-use DesignPatterns\ChainOfResponsibility\Numbers\Chain;
+namespace DesignPatterns\ChainOfResponsibility\Numbers;
 
 /**
  * Multiply numbers chain link class

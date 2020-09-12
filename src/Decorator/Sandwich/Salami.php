@@ -1,8 +1,6 @@
 <?php
-namespace DesignPatterns\Decorator\Sandwich;
 
-use DesignPatterns\Decorator\Sandwich\SandwichInterface;
-use DesignPatterns\Decorator\Sandwich\SandwichAddition;
+namespace DesignPatterns\Decorator\Sandwich;
 
 /**
  * Sandwich ingredient class which can be used to extend base class functionality

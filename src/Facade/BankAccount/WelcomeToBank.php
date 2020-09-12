@@ -1,4 +1,5 @@
 <?php
+
 namespace DesignPatterns\Facade\BankAccount;
 
 /**
@@ -13,7 +14,7 @@ class WelcomeToBank
         $this->welcome = 'Witamy w banku ABC S.A.';
     }
 
-    public function welcomeClients()
+    public function welcomeClients(): ?string
     {
         return $this->welcome;
     }

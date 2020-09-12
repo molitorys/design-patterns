@@ -1,14 +1,14 @@
 <?php
-namespace DesignPatterns\Strategy\Compression;
 
-use DesignPatterns\Strategy\Compression\Compression;
+namespace DesignPatterns\Strategy\Compression;
 
 /**
  * Compress file into zip pack
  */
 class ZipCompression implements Compression
 {
-    public function compressFile($filePath) {
+    public function compressFile($filePath) : string
+    {
         return 'Kompresuje plik '.$filePath.' do formatu ZIP';
     }
 }

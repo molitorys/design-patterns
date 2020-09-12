@@ -1,4 +1,5 @@
 <?php
+
 namespace DesignPatterns\Facade\BankAccount;
 
 /**
@@ -8,17 +9,13 @@ class AccountNumberCheck
 {
   private $accountNumber = '123456789';
 
-  public function getAccountNumber()
+  public function getAccountNumber(): string
   {
     return $this->accountNumber;
   }
 
-  public function accountActive($accountNumberToCheck)
+  public function accountActive($accountNumberToCheck): bool
   {
-    if($accountNumberToCheck == $this->getAccountNumber()) {
-      return true;
-    }
-
-    return false;
+    return $accountNumberToCheck == $this->getAccountNumber();
   }
 }

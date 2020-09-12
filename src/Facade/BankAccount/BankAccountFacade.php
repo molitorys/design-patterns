@@ -1,10 +1,6 @@
 <?php
-namespace DesignPatterns\Facade\BankAccount;
 
-use DesignPatterns\Facade\BankAccount\WelcomeToBank;
-use DesignPatterns\Facade\BankAccount\AccountNumberCheck;
-use DesignPatterns\Facade\BankAccount\SecurityCodeCheck;
-use DesignPatterns\Facade\BankAccount\FundsCheck;
+namespace DesignPatterns\Facade\BankAccount;
 
 /**
  * Bank account facade class - allows to perform client operations
@@ -20,7 +16,7 @@ class BankAccountFacade
 
   private $bankWelcome;
 
-  public function __construct($accountNumber, $securityCode)
+  public function __construct(string $accountNumber, string $securityCode)
   {
     $this->accountNumber = $accountNumber;
     $this->securityCode = $securityCode;
@@ -33,17 +29,17 @@ class BankAccountFacade
     $this->fundChecker = new FundsCheck();
   }
 
-  public function getAccountNumber()
+  public function getAccountNumber(): string
   {
     return $this->accountNumber;
   }
 
-  public function getSecurityCode()
+  public function getSecurityCode(): string
   {
     return $this->securityCode;
   }
 
-  public function withdrawCash($cashToGet)
+  public function withdrawCash($cashToGet): void
   {
     if($this->accountChecker->accountActive($this->getAccountNumber())
         && $this->codeChecker->isCodeCorrect($this->getSecurityCode())
@@ -58,7 +54,7 @@ class BankAccountFacade
     }
   }
 
-  public function depositCash($cashToDeposit)
+  public function depositCash($cashToDeposit): void
   {
     if($this->accountChecker->accountActive($this->getAccountNumber())
         && $this->codeChecker->isCodeCorrect($this->getSecurityCode())) {

@@ -6,5 +6,5 @@ namespace DesignPatterns\Strategy\Compression;
  */
 interface Compression
 {
-    public function compressFile($filePath);
+    public function compressFile($filePath): string;
 }

@@ -1,4 +1,5 @@
 <?php
+
 namespace DesignPatterns\Adapter\Robot;
 
 /**
@@ -6,7 +7,7 @@ namespace DesignPatterns\Adapter\Robot;
  */
 interface EnemyAttacker
 {
-    public function fireWeapon();
-    public function driveForward();
-    public function assignDriver($driverName);
+    public function fireWeapon(): void;
+    public function driveForward(): void;
+    public function assignDriver(string $driverName): void;
 }

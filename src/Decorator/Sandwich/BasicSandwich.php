@@ -1,7 +1,6 @@
 <?php
-namespace DesignPatterns\Decorator\Sandwich;
 
-use DesignPatterns\Decorator\Sandwich\SandwichInterface;
+namespace DesignPatterns\Decorator\Sandwich;
 
 /**
  * Decorator base class
@@ -11,12 +10,12 @@ class BasicSandwich implements SandwichInterface
     private $ingredients = ['bułka', 'masło', 'majonez'];
     private $cost = 8.00;
     
-    public function getCost()
+    public function getCost(): float
     {
         return $this->cost;
     }
     
-    public function getIngredients()
+    public function getIngredients(): array
     {
         return $this->ingredients;
     }

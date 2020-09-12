@@ -1,4 +1,5 @@
 <?php
+
 namespace DesignPatterns\Builder\Robot;
 
 /**
@@ -6,9 +7,9 @@ namespace DesignPatterns\Builder\Robot;
  */
 interface RobotBuilder
 {
-  public function buildHead();
-  public function buildTorso();
-  public function buildArms();
-  public function buildLegs();
-  public function getRobot();  
+  public function buildHead(): void;
+  public function buildTorso(): void;
+  public function buildArms(): void;
+  public function buildLegs(): void;
+  public function getRobot(): Robot;
 }

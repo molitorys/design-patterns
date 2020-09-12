@@ -1,4 +1,5 @@
 <?php
+
 namespace DesignPatterns\ChainOfResponsibility\Numbers;
 
 /**
@@ -6,9 +7,12 @@ namespace DesignPatterns\ChainOfResponsibility\Numbers;
  */
 abstract class Chain 
 {
+    /**
+     * @var Chain
+     */
     protected $nextChainElement;
     
-    public function setNextChainElement(Chain $nextChainElement)
+    public function setNextChainElement(Chain $nextChainElement): void
     {
         $this->nextChainElement = $nextChainElement;
     }

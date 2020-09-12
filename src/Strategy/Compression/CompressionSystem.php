@@ -1,4 +1,5 @@
 <?php
+
 namespace DesignPatterns\Strategy\Compression;
 
 /**
@@ -6,6 +7,9 @@ namespace DesignPatterns\Strategy\Compression;
  */
 class CompressionSystem
 {
+    /**
+     * @var Compression
+     */
     private $compressionStrategy;
     
     public function setCompressionEngine(Compression $compressionStrategy)
@@ -13,7 +17,8 @@ class CompressionSystem
         $this->compressionStrategy = $compressionStrategy;
     }
     
-    public function compress($filePath) {
+    public function compress($filePath): string
+    {
         return $this->compressionStrategy->compressFile($filePath);
     }   
 }

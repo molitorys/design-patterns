@@ -1,7 +1,6 @@
 <?php
-namespace DesignPatterns\Adapter\Robot;
 
-use DesignPatterns\Adapter\Robot\EnemyAttacker;
+namespace DesignPatterns\Adapter\Robot;
 
 /**
  * Adapter class which implements Enemy Attacker Robot interface
@@ -15,17 +14,17 @@ class EnemyRobotAdapter implements EnemyAttacker
         $this->theRobot = $newRobot;
     }
 
-    public function fireWeapon()
+    public function fireWeapon(): void
     {
         $this->theRobot->smashWithHands();
     }
 
-    public function driveForward()
+    public function driveForward(): void
     {
         $this->theRobot->walkForward();
     }
 
-    public function assignDriver($driverName)
+    public function assignDriver(string $driverName): void
     {
         $this->theRobot->reactToHuman($driverName);
     }

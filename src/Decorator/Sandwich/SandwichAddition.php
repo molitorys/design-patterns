@@ -1,7 +1,6 @@
 <?php
-namespace DesignPatterns\Decorator\Sandwich;
 
-use DesignPatterns\Decorator\Sandwich\SandwichInterface;
+namespace DesignPatterns\Decorator\Sandwich;
 
 /**
  * Ingredients abstrack class
@@ -18,12 +17,12 @@ abstract class SandwichAddition implements SandwichInterface
         $this->sandwich = $sandwich;
     }
     
-    public function getCost()
+    public function getCost(): float
     {
         return $this->sandwich->getCost() + $this->cost;
     }
     
-    public function getIngredients()
+    public function getIngredients(): array
     {
         return array_merge($this->sandwich->getIngredients(), $this->ingredients);
     }

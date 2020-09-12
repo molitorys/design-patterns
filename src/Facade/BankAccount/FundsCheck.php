@@ -1,4 +1,5 @@
 <?php
+
 namespace DesignPatterns\Facade\BankAccount;
 
 /**
@@ -8,12 +9,12 @@ class FundsCheck
 {
   private $cashInAccount = 0.00;
 
-  public function getCashInAccount()
+  public function getCashInAccount(): float
   {
     return $this->cashInAccount;
   }
 
-  public function decreaseCashInAccount($cashWithdrawn)
+  public function decreaseCashInAccount($cashWithdrawn): void
   {
     $this->cashInAccount -= $cashWithdrawn;
 
@@ -22,12 +23,12 @@ class FundsCheck
     }
   }
 
-  public function increaseCashInAccount($cashDeposit)
+  public function increaseCashInAccount($cashDeposit): void
   {
     $this->cashInAccount += $cashDeposit;
   }
 
-  public function haveEnoughMoney($cashToWithdrawal)
+  public function haveEnoughMoney($cashToWithdrawal): bool
   {
     if($cashToWithdrawal > $this->getCashInAccount()) {
       echo 'Błąd. Brak wystarczającej ilości środków na koncie'.PHP_EOL;
@@ -38,13 +39,13 @@ class FundsCheck
     return true;
   }
 
-  public function makeWithdrawn($cashToWithdrawal)
+  public function makeWithdrawn($cashToWithdrawal): void
   {
     $this->decreaseCashInAccount($cashToWithdrawal);
     echo 'Wypłata zakonczona: Aktualny stan konta wynosi '.$this->getCashInAccount().PHP_EOL;
   }
 
-  public function makeDeposit($cashToDeposit)
+  public function makeDeposit($cashToDeposit): void
   {
     $this->increaseCashInAccount($cashToDeposit);
     echo 'Wpłata zakomczona: Aktualny stan konta wynosi '.$this->getCashInAccount().PHP_EOL;

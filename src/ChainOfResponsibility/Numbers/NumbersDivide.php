@@ -1,4 +1,5 @@
 <?php
+
 namespace DesignPatterns\ChainOfResponsibility\Numbers;
 
 use DesignPatterns\ChainOfResponsibility\Numbers\Chain;

@@ -1,4 +1,5 @@
 <?php
+
 namespace DesignPatterns\Builder\Robot;
 
 /**
@@ -6,8 +7,8 @@ namespace DesignPatterns\Builder\Robot;
  */
 interface RobotPlan
 {
-    public function setHead($head);
-    public function setTorso($torso);
-    public function setArms($arms);
-    public function setLegs($legs);
+    public function setHead(string $head): void;
+    public function setTorso(string $torso): void;
+    public function setArms(string $arms): void;
+    public function setLegs(string $legs): void;
 }

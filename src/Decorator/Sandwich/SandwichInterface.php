@@ -1,4 +1,5 @@
 <?php
+
 namespace DesignPatterns\Decorator\Sandwich;
 
 /**
@@ -6,6 +7,6 @@ namespace DesignPatterns\Decorator\Sandwich;
  */
 interface SandwichInterface
 {
-    public function getCost();
-    public function getIngredients();
+    public function getCost(): float;
+    public function getIngredients(): array;
 }

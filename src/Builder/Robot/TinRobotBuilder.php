@@ -1,8 +1,6 @@
 <?php
-namespace DesignPatterns\Builder\Robot;
 
-use DesignPatterns\Builder\Robot\RobotBuilder;
-use DesignPatterns\Builder\Robot\Robot;
+namespace DesignPatterns\Builder\Robot;
 
 /**
  * Robot Builder whi builds robot made of tin
@@ -16,27 +14,27 @@ class TinRobotBuilder implements RobotBuilder
     $this->robot = new Robot();
   }
 
-  public function buildHead()
+  public function buildHead(): void
   {
     $this->robot->setHead('aluminiowa kulka');
   }
 
-  public function buildTorso()
+  public function buildTorso(): void
   {
     $this->robot->setTorso('puszka aluminiowa');
   }
 
-  public function buildArms()
+  public function buildArms(): void
   {
     $this->robot->setArms('zapałki');
   }
 
-  public function buildLegs()
+  public function buildLegs(): void
   {
     $this->robot->setLegs('kółka');
   }
 
-  public function getRobot()
+  public function getRobot(): Robot
   {
     return $this->robot;
   }
