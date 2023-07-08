@@ -4,36 +4,20 @@ namespace DesignPatterns\Observer\Stock;
 
 class StockGrabber implements SubjectInterface
 {
-    /**
-     * @var array
-     */
-    private $observers;
+    private array $observers;
+    private array $stockItems;
 
-    /**
-     * @var array
-     */
-    private $stockItems;
-
-    /**
-     * StockGrabber constructor.
-     */
     public function __construct()
     {
         $this->observers = [];
         $this->stockItems = [];
     }
 
-    /**
-     * @inheritDoc
-     */
     public function register(ObserverInterface $observer): void
     {
         $this->observers[] = $observer;
     }
 
-    /**
-     * @inheritDoc
-     */
     public function unregister(ObserverInterface $observer): void
     {
         $observerIndex = array_search($observer, $this->observers);
@@ -42,14 +26,9 @@ class StockGrabber implements SubjectInterface
         }
     }
 
-    /**
-     * @inheritDoc
-     */
     public function notifyObserver(): void
     {
-        /**
-         * @var ObserverInterface $observer
-         */
+        /** @var ObserverInterface $observer */
         foreach ($this->observers as $observer) {
             $observer->update($this->stockItems);
         }
@@ -57,8 +36,6 @@ class StockGrabber implements SubjectInterface
 
     /**
      * Add stock item to the list.
-     *
-     * @param StockItem $stockItem
      */
     public function setStockItem(StockItem $stockItem): void
     {

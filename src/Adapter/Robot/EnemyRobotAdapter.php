@@ -7,7 +7,7 @@ namespace DesignPatterns\Adapter\Robot;
  */
 class EnemyRobotAdapter implements EnemyAttacker
 {
-    private $theRobot;
+    private EnemyRobot $theRobot;
 
     public function __construct(EnemyRobot $newRobot)
     {

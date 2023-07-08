@@ -2,29 +2,15 @@
 
 namespace DesignPatterns\Observer\Stock;
 
-use DesignPatterns\Observer\Stock\StockItem\StockItem;
-
 class StockObserver implements ObserverInterface
 {
-    /**
-     * @var int
-     */
-    private static $observerIdTracker = 0;
+    private static int $observerIdTracker = 0;
 
-    /**
-     * @var int
-     */
-    private $observerId;
+    private int $observerId;
 
-    /**
-     * @var SubjectInterface
-     */
-    private $stockGrabber;
+    private SubjectInterface $stockGrabber;
 
-    /**
-     * @var array
-     */
-    private $stockItems;
+    private array $stockItems;
 
     public function __construct(SubjectInterface $stockGrabber)
     {

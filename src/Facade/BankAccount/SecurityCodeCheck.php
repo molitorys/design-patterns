@@ -7,15 +7,15 @@ namespace DesignPatterns\Facade\BankAccount;
  */
 class SecurityCodeCheck
 {
-  private $securityCode = '1234';
+    private string $securityCode = '1234';
 
-  public function getSecurityCode(): string
-  {
-    return $this->securityCode;
-  }
+    public function getSecurityCode(): string
+    {
+        return $this->securityCode;
+    }
 
-  public function isCodeCorrect($securityCodeToCheck): bool
-  {
-    return $securityCodeToCheck == $this->getSecurityCode();
-  }
+    public function isCodeCorrect($securityCodeToCheck): bool
+    {
+        return $securityCodeToCheck == $this->getSecurityCode();
+    }
 }

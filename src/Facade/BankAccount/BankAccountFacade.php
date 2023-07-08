@@ -7,64 +7,66 @@ namespace DesignPatterns\Facade\BankAccount;
  */
 class BankAccountFacade
 {
-  private $accountNumber;
-  private $securityCode;
+    private string $accountNumber;
+    private string $securityCode;
 
-  private $accountChecker;
-  private $codeChecker;
-  private $fundChecker;
+    private WelcomeToBank $bankWelcome;
 
-  private $bankWelcome;
+    private AccountNumberCheck $accountChecker;
+    private SecurityCodeCheck $codeChecker;
+    private FundsCheck $fundChecker;
 
-  public function __construct(string $accountNumber, string $securityCode)
-  {
-    $this->accountNumber = $accountNumber;
-    $this->securityCode = $securityCode;
+    public function __construct(string $accountNumber, string $securityCode)
+    {
+        $this->accountNumber = $accountNumber;
+        $this->securityCode = $securityCode;
 
-    $this->bankWelcome = new WelcomeToBank();
-    $this->bankWelcome->welcomeClients();
+        $this->bankWelcome = new WelcomeToBank();
+        echo $this->bankWelcome->welcomeClients();
 
-    $this->accountChecker = new AccountNumberCheck();
-    $this->codeChecker = new SecurityCodeCheck();
-    $this->fundChecker = new FundsCheck();
-  }
-
-  public function getAccountNumber(): string
-  {
-    return $this->accountNumber;
-  }
-
-  public function getSecurityCode(): string
-  {
-    return $this->securityCode;
-  }
-
-  public function withdrawCash($cashToGet): void
-  {
-    if($this->accountChecker->accountActive($this->getAccountNumber())
-        && $this->codeChecker->isCodeCorrect($this->getSecurityCode())
-        && $this->fundChecker->haveEnoughMoney($cashToGet)) {
-
-          $this->fundChecker->makeWithdrawn($cashToGet);
-
-          echo 'Transakcja zakonczona'.PHP_EOL;
-
-    } else {
-          echo 'Transakcja nie powiodła się'.PHP_EOL;
+        $this->accountChecker = new AccountNumberCheck();
+        $this->codeChecker = new SecurityCodeCheck();
+        $this->fundChecker = new FundsCheck();
     }
-  }
 
-  public function depositCash($cashToDeposit): void
-  {
-    if($this->accountChecker->accountActive($this->getAccountNumber())
-        && $this->codeChecker->isCodeCorrect($this->getSecurityCode())) {
-
-          $this->fundChecker->makeDeposit($cashToDeposit);
-
-          echo 'Transakcja zakonczona'.PHP_EOL;
-
-    } else {
-          echo 'Transakcja nie powiodła się'.PHP_EOL;
+    public function getAccountNumber(): string
+    {
+        return $this->accountNumber;
     }
-  }
+
+    public function getSecurityCode(): string
+    {
+        return $this->securityCode;
+    }
+
+    public function withdrawCash($cashToGet): void
+    {
+        if ($this->accountChecker->accountActive($this->getAccountNumber())
+            && $this->codeChecker->isCodeCorrect($this->getSecurityCode())
+            && $this->fundChecker->haveEnoughMoney($cashToGet)) {
+
+            $this->fundChecker->makeWithdrawn($cashToGet);
+
+            echo 'Transakcja zakonczona'.PHP_EOL;
+
+            return;
+        }
+
+        echo 'Transakcja nie powiodła się'.PHP_EOL;
+    }
+
+    public function depositCash($cashToDeposit): void
+    {
+        if ($this->accountChecker->accountActive($this->getAccountNumber())
+            && $this->codeChecker->isCodeCorrect($this->getSecurityCode())) {
+
+            $this->fundChecker->makeDeposit($cashToDeposit);
+
+            echo 'Transakcja zakonczona'.PHP_EOL;
+
+            return;
+        }
+
+        echo 'Transakcja nie powiodła się'.PHP_EOL;
+    }
 }

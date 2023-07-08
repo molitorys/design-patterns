@@ -4,8 +4,8 @@ namespace DesignPatterns\Command\ElectronicDevice;
 
 class Radio implements ElectronicDeviceInterface
 {
-    private $state = 'off';
-    private $volume = 5;
+    private string $state = 'off';
+    private int $volume = 5;
 
     public function on(): void
     {

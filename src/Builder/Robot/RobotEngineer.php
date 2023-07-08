@@ -7,7 +7,7 @@ namespace DesignPatterns\Builder\Robot;
  */
 class RobotEngineer
 {
-  private $robotBuilder;
+  private RobotBuilder $robotBuilder;
 
   public function __construct(RobotBuilder $robotBuilder)
   {

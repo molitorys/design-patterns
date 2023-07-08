@@ -7,7 +7,7 @@ namespace DesignPatterns\Facade\BankAccount;
  */
 class WelcomeToBank
 {
-    private $welcome;
+    private string $welcome;
 
     public function __construct()
     {

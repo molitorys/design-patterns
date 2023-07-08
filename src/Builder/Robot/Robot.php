@@ -3,14 +3,14 @@
 namespace DesignPatterns\Builder\Robot;
 
 /**
- * Robot which i built according to plan
+ * Robot which I built according to plan
  */
 class Robot implements RobotPlan
 {
-    private $head;
-    private $torso;
-    private $arms;
-    private $legs;
+    private string $head;
+    private string $torso;
+    private string $arms;
+    private string $legs;
     
     public function setHead(string $head): void
     {

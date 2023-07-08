@@ -4,8 +4,8 @@ namespace DesignPatterns\Command\ElectronicDevice;
 
 class Television implements ElectronicDeviceInterface
 {
-    private $state = 'off';
-    private $volume = 10;
+    private string $state = 'off';
+    private int $volume = 10;
 
     public function on(): void
     {

@@ -7,8 +7,8 @@ namespace DesignPatterns\Decorator\Sandwich;
  */
 class BasicSandwich implements SandwichInterface
 {
-    private $ingredients = ['bułka', 'masło', 'majonez'];
-    private $cost = 8.00;
+    private array $ingredients = ['bułka', 'masło', 'majonez'];
+    private float $cost = 8.00;
     
     public function getCost(): float
     {

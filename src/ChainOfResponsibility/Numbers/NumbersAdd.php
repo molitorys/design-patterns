@@ -7,7 +7,7 @@ namespace DesignPatterns\ChainOfResponsibility\Numbers;
  */
 class NumbersAdd extends Chain
 {
-    public function calculate(Numbers $request)
+    public function calculate(Numbers $request): ?float
     {
         if($request->getCalcType() == 'add') {
             $result = $request->getNum1() + $request->getNum2();
@@ -15,6 +15,6 @@ class NumbersAdd extends Chain
             return $result;
         }
         
-        $this->nextChainElement->calculate($request);
+        return $this->nextChainElement->calculate($request);
     }
 }

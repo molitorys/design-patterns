@@ -18,6 +18,9 @@ $chainMultiply->setNextChainElement($chainDivide);
 
 $request1 = new Numbers(4, 2, 'mul');
 $chainAdd->calculate($request1);
-
+echo '<br />';
 $request2 = new Numbers(4, 2, 'sub');
 $chainAdd->calculate($request2);
+echo '<br />';
+$request3 = new Numbers(4, 2, 'aaa');
+$chainAdd->calculate($request3);

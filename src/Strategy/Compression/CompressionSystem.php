@@ -7,12 +7,9 @@ namespace DesignPatterns\Strategy\Compression;
  */
 class CompressionSystem
 {
-    /**
-     * @var Compression
-     */
-    private $compressionStrategy;
+    private Compression $compressionStrategy;
     
-    public function setCompressionEngine(Compression $compressionStrategy)
+    public function setCompressionEngine(Compression $compressionStrategy): void
     {
         $this->compressionStrategy = $compressionStrategy;
     }

@@ -7,10 +7,10 @@ namespace DesignPatterns\ChainOfResponsibility\Numbers;
  */
 class Numbers
 {
-    private $num1;
-    private $num2;
+    private float $num1;
+    private float $num2;
 
-    private $calcType;
+    private string $calcType;
 
     public function __construct(float $num1, float $num2, string $calcType)
     {

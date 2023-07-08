@@ -3,14 +3,14 @@
 namespace DesignPatterns\Decorator\Sandwich;
 
 /**
- * Ingredients abstrack class
+ * Ingredients abstract class
  */
 abstract class SandwichAddition implements SandwichInterface
 {
-    protected $ingredients = [];
-    protected $cost = 0.00;
+    protected array $ingredients = [];
+    protected float $cost = 0.00;
     
-    protected $sandwich;
+    protected SandwichInterface $sandwich;
 
     protected function __construct(SandwichInterface $sandwich)
     {

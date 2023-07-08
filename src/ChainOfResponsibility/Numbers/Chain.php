@@ -7,16 +7,13 @@ namespace DesignPatterns\ChainOfResponsibility\Numbers;
  */
 abstract class Chain 
 {
-    /**
-     * @var Chain
-     */
-    protected $nextChainElement;
+    protected Chain $nextChainElement;
     
     public function setNextChainElement(Chain $nextChainElement): void
     {
         $this->nextChainElement = $nextChainElement;
     }
-    
-    public abstract function calculate(Numbers $request);
+
+    public abstract function calculate(Numbers $request): ?float;
 }
 

@@ -4,9 +4,9 @@ namespace DesignPatterns\Singleton\DatabaseManager;
 
 class DatabaseConnector
 {
-    private static $instance;
+    private static ?DatabaseConnector $instance = null;
 
-    private $connection;
+    private string $connection;
 
     private function __construct() {}
 
@@ -20,13 +20,13 @@ class DatabaseConnector
         return self::$instance;
     }
 
-    private function makeConnection()
+    private function makeConnection(): void
     {
         echo 'Connecting to database...';
         $this->connection = 'CONNECTION';
     }
 
-    public function executeQuery(string $sql)
+    public function executeQuery(string $sql): void
     {
         echo 'Executing query: ' . $sql . ' for connection: ' . $this->connection;
     }

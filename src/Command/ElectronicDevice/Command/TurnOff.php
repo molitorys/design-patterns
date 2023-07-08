@@ -6,7 +6,7 @@ use DesignPatterns\Command\ElectronicDevice\ElectronicDeviceInterface;
 
 class TurnOff implements CommandInterface
 {
-    private $electronicDevice;
+    private ElectronicDeviceInterface $electronicDevice;
 
     public function __construct(ElectronicDeviceInterface $electronicDevice)
     {

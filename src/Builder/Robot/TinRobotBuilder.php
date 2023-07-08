@@ -7,7 +7,7 @@ namespace DesignPatterns\Builder\Robot;
  */
 class TinRobotBuilder implements RobotBuilder
 {
-  private $robot;
+  private Robot $robot;
 
   public function __construct()
   {
