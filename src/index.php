@@ -17,6 +17,9 @@ $clients = [
     'Command' => [
         'Electronic Device' => 'Command/ElectronicDevice/client.php'
     ],
+    'Composite' => [
+        'Songs' => 'Composite/Songs/client.php'
+    ],
     'Decorator' => [
         'Sandwich' => 'Decorator/Sandwich/client.php'
     ],
