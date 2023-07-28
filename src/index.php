@@ -35,6 +35,9 @@ $clients = [
     'Interpreter' => [
         'Units' => 'Interpreter/Units/client.php'
     ],
+    'Iterator' => [
+        'Songs' => 'Iterator/Songs/client.php'
+    ],
     'Model View Controller (MVC)' => [
         'Calculator' => 'MVC/Calculator/client.php'
     ],
