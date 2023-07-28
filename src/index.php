@@ -9,6 +9,7 @@ $clients = [
     'Decorator - Sandwich' => 'Decorator/Sandwich/client.php',
     'Facade - Bank Account' => 'Facade/BankAccount/client.php',
     'Flyweight - Shapes' => 'Flyweight/Shapes/client.php',
+    'Model View Controller (MVC) - Calcilator' => 'MVC/Calculator/client.php',
     'Observer - Stock' => 'Observer/Stock/client.php',
     'Singleton - Database Manager' => 'Singleton/DatabaseManager/client.php',
     'Strategy - Compression' => 'Strategy/Compression/client.php',
