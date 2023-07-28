@@ -43,10 +43,13 @@ $clients = [
     ],
     'Observer' => [
         'Stock' => 'Observer/Stock/client.php'
-    ] ,
+    ],
+    'Prototype' => [
+        'Animal' => 'Prototype/Animal/client.php'
+    ],
     'Singleton' => [
         'Database Manager' => 'Singleton/DatabaseManager/client.php'
-    ] ,
+    ],
     'Strategy' => [
         'Compression' => 'Strategy/Compression/client.php'
     ],
