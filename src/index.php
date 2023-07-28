@@ -13,6 +13,7 @@ $clients = [
     'Observer - Stock' => 'Observer/Stock/client.php',
     'Singleton - Database Manager' => 'Singleton/DatabaseManager/client.php',
     'Strategy - Compression' => 'Strategy/Compression/client.php',
+    'Template Method - Sandwich' => 'TemplateMethod/Sandwich/client.php',
 ];
 
 echo '<h1>Design Patterns</h1>';
