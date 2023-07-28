@@ -26,6 +26,9 @@ $clients = [
     'Facade' => [
         'Bank Account' => 'Facade/BankAccount/client.php'
     ],
+    'Factory' => [
+        'Enemy Ship' => 'Factory/EnemyShip/client.php'
+    ],
     'Flyweight' => [
         'Shapes' => 'Flyweight/Shapes/client.php'
     ] ,
