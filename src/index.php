@@ -38,6 +38,9 @@ $clients = [
     'Iterator' => [
         'Songs' => 'Iterator/Songs/client.php'
     ],
+    'Memento' => [
+        'Article' => 'Memento/Article/client.php'
+    ],
     'Model View Controller (MVC)' => [
         'Calculator' => 'MVC/Calculator/client.php'
     ],
