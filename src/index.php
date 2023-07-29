@@ -53,6 +53,9 @@ $clients = [
     'Prototype' => [
         'Animal' => 'Prototype/Animal/client.php'
     ],
+    'Proxy' => [
+        'ATM' => 'Proxy/ATM/client.php'
+    ],
     'Singleton' => [
         'Database Manager' => 'Singleton/DatabaseManager/client.php'
     ],
