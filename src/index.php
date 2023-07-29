@@ -38,6 +38,9 @@ $clients = [
     'Iterator' => [
         'Songs' => 'Iterator/Songs/client.php'
     ],
+    'Mediator' => [
+        'Stock' => 'Mediator/Stock/client.php'
+    ],
     'Memento' => [
         'Article' => 'Memento/Article/client.php'
     ],
