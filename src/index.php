@@ -57,6 +57,7 @@ $clients = [
         'Database Manager' => 'Singleton/DatabaseManager/client.php'
     ],
     'Strategy' => [
+        'Animals' => 'Strategy/Animals/client.php',
         'Compression' => 'Strategy/Compression/client.php'
     ],
     'Template Method' => [
