@@ -61,6 +61,9 @@ $clients = [
     ],
     'Template Method' => [
         'Sandwich' => 'TemplateMethod/Sandwich/client.php'
+    ],
+    'Visitor' => [
+        'Tax' => 'Visitor/Tax/client.php'
     ]
 ];
 
