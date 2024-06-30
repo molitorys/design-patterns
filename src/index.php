@@ -60,7 +60,8 @@ $clients = [
         'Database Manager' => 'Singleton/DatabaseManager/client.php'
     ],
     'State' => [
-        'ATM' => 'State/ATM/client.php'
+        'ATM' => 'State/ATM/client.php',
+        'Deployment' => 'State/Deployment/client.php',
     ],
     'Strategy' => [
         'Animals' => 'Strategy/Animals/client.php',
