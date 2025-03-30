@@ -2,7 +2,8 @@
 
 $clients = [
     'Adapter' => [
-        'Robot' => 'Adapter/Robot/client.php'
+        'Robot' => 'Adapter/Robot/client.php',
+        'MathSystem' => 'Adapter/MathSystem/client.php'
     ],
     'Bridge' => [
         'Shape' => 'Bridge/Shape/client.php',
